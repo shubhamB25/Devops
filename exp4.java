@@ -2,7 +2,13 @@ class Main
 {
     public static void main(String[] args)
     {
+        int counter = 0 ;
         for(String in : args)
-            System.out.println(in);
+        {
+            counter++ ;
+            System.out.println(counter +" "+ in);
+        }
+
+
     }
 }
