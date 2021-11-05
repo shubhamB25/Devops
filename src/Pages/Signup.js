@@ -4,8 +4,6 @@ import logo from '../Assets/logo.png'
 import FormInput from '../Components/FormInput/FormInput'
 import { useForm } from 'react-hook-form'
 import heroImage from '../Assets/heroImage.png'
-import { useSignupContext } from '../Context/SignupContext'
-import Loader from '../Components/Loading/Loading'
 import { useHistory } from 'react-router-dom'
 
 const Signup = () => {
@@ -22,19 +20,6 @@ const Signup = () => {
 
     const onSubmitHandler = (data) => {
 
-        const url = !login ? 'user/signup' : 'user/login'
-        const split = data.name?.split(' ')
-        console.log(split)
-        const Data = !login
-            ? {
-                firstname: split[0],
-                lastname: split[1] ? split[1] : '',
-                email: data.email,
-                password: data.password,
-                username: data.username,
-            }
-            : data
-        //const response = await signUpOrLogin(url, Data)
         history.push('Devops/dashboard')
     }
 
