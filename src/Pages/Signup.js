@@ -16,13 +16,12 @@ const Signup = () => {
     } = useForm({ mode: 'onBlur' })
 
     const history = useHistory()
-    const { screenWidth, signUpOrLogin, loading } = useSignupContext()
+    //const { screenWidth, signUpOrLogin, loading } = useSignupContext()
     const [login, setLogin] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
 
     const onSubmitHandler = (data) => {
 
-        console.log("adfasdfasdf");
         const url = !login ? 'user/signup' : 'user/login'
         const split = data.name?.split(' ')
         console.log(split)
@@ -36,7 +35,7 @@ const Signup = () => {
             }
             : data
         //const response = await signUpOrLogin(url, Data)
-        history.push('/dashboard')
+        history.push('Devops/dashboard')
     }
 
     return (
@@ -46,10 +45,10 @@ const Signup = () => {
                     <img src={logo} alt='Hero' />
                 </div>
             </nav>
-            <main className={`signup-page ${screenWidth <= 700 && 'display-phone'}`}>
+            <main className={`signup-page ${ 'display-phone'}`}>
                 <section
                     className='form-container margin-t-s'
-                    style={{ marginLeft: screenWidth > 700 ? '10rem' : '0' }}
+                    style={{ marginLeft:  '10rem'  }}
                 >
                     <h3>Welcome To Globiliti! </h3>
                     <p className='text margin-t-xs'>
@@ -136,11 +135,7 @@ const Signup = () => {
                                 setShowPassword={setShowPassword}
                             />
                         </div>
-                        {loading ? (
-                            <button className='btn transition-slow flex' disabled={true}>
-                                Loading.. <Loader styles='loader-small' />
-                            </button>
-                        ) : (
+                        {  (
                             <button className='btn transition-slow' >
                                 {!login ? 'Create Account' : 'Login'}
                             </button>
@@ -153,11 +148,11 @@ const Signup = () => {
                         </p>
                     </form>
                 </section>
-                {screenWidth >= 700 ? (
+                {  (
                     <div className='hero-image'>
                         <img src={heroImage} alt={'Hero'} />
                     </div>
-                ) : null}
+                ) }
             </main>
         </>
     )

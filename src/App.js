@@ -14,7 +14,7 @@ const App = () => {
         <Route path='/Devops' exact>
           <Signup />
         </Route>
-        <Route path='/dashboard' exact>
+        <Route path='/Devops/dashboard' exact>
           <Dashboard />
         </Route>
       </Switch>
