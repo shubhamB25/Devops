@@ -36,6 +36,7 @@ const Signup = () => {
                     style={{ marginLeft:  '10rem'  }}
                 >
                     <h3>Welcome To Globiliti! </h3>
+                    <h3>You Own Personal Dashboard</h3>
                     <p className='text margin-t-xs'>
                         {!login
                             ? 'create your school account'
