@@ -39,7 +39,7 @@ const Signup = () => {
                     <h3>You Own Personal Dashboard</h3>
                     <p className='text margin-t-xs'>
                         {!login
-                            ? 'create your school account'
+                            ? 'create your school Students!!'
                             : 'login to your school account'}
                     </p>
                     <form
